@@ -29,8 +29,11 @@ public:
 
     //// STUDENT CODE
     ////
-    ChatBot(const ChatBot &source) = delete; // Copy constructor unused
+    // Copy construction is not used so delete it
+    ChatBot(const ChatBot &source) = delete;
     ChatBot(ChatBot &&source); // Move constructor
+
+    // Copy assignment is not used so delete it
 
     ChatBot &operator=(const ChatBot &source) = delete;
     ChatBot &operator=(ChatBot &&source); // Move assignment

@@ -43,6 +43,7 @@ void GraphNode::MoveChatbotHere(ChatBot chatbot)
 void GraphNode::MoveChatbotToNewNode(GraphNode *newNode)
 {
     newNode->MoveChatbotHere(move(_chatBot));
+    _chatBot.~ChatBot(); // This instance of _chatBot is now invalid so explicitly call the destructor.
 }
 ////
 //// EOF STUDENT CODE
