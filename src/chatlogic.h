@@ -7,6 +7,7 @@
 
 using std::unique_ptr;
 using std::make_unique;
+using std::move;
 // forward declarations
 class ChatBot;
 class GraphEdge;
