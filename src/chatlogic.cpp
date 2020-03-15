@@ -49,10 +49,11 @@ ChatLogic::~ChatLogic()
 //    }
 
     // delete all edges
-    for (auto it = std::begin(_edges); it != std::end(_edges); ++it)
-    {
-        delete *it;
-    }
+    // TODO: Delete this dead code
+//    for (auto it = std::begin(_edges); it != std::end(_edges); ++it)
+//    {
+//        delete *it;
+//    }
 
     ////
     //// EOF STUDENT CODE
@@ -170,7 +171,6 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
                             auto edge = make_unique<GraphEdge>(id);
                             edge->SetChildNode(childNode->get());
                             edge->SetParentNode(parentNode->get());
-                            _edges.push_back(edge.get());
 
                             // find all keywords for current node
                             AddAllTokensToElement("KEYWORD", tokens, *edge);
