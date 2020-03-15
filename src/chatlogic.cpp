@@ -17,15 +17,7 @@ ChatLogic::ChatLogic()
     //// STUDENT CODE
     ////
 
-    // TODO: Delete this debugging log
-    std::cout << "initialize chatLogic" << std::endl;
-
-  // TODO: Delete this dead code
-    // create instance of chatbot
-//    _chatBot = new ChatBot("../images/chatbot.png");
-//
-//    // add pointer to chatlogic so that chatbot answers can be passed on to the GUI
-//    _chatBot->SetChatLogicHandle(this);
+    // ChatLogic no longer allocates any resources
 
     ////
     //// EOF STUDENT CODE
@@ -36,25 +28,7 @@ ChatLogic::~ChatLogic()
     //// STUDENT CODE
     ////
 
-    //TODO: Delete this debugging log
-    std::cout << "delete chatLogic" << std::endl;
-
-    // delete chatbot instance
-    //delete _chatBot;
-
-    // delete all nodes
-    // TODO: Delete this dead code
-//    for (auto it = std::begin(_nodes); it != std::end(_nodes); ++it)
-//    {
-//        delete *it;
-//    }
-
-    // delete all edges
-    // TODO: Delete this dead code
-//    for (auto it = std::begin(_edges); it != std::end(_edges); ++it)
-//    {
-//        delete *it;
-//    }
+    // ChatLogic no longer has any owned resources to delete
 
     ////
     //// EOF STUDENT CODE

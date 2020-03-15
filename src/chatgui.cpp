@@ -137,8 +137,8 @@ ChatBotPanelDialog::~ChatBotPanelDialog()
     //// STUDENT CODE
     ////
 
-    // TODO: Delete this dead code if this is the correct approach
-    //delete _chatLogic;
+    // This code causes a double deletion
+    // delete _chatLogic;
 
     ////
     //// EOF STUDENT CODE

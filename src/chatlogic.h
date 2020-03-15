@@ -21,8 +21,6 @@ private:
 
     // data handles (owned)
     std::vector<unique_ptr<GraphNode>> _nodes;
-    // TODO: Delete this dead code
-    //std::vector<GraphEdge *> _edges;
 
     ////
     //// EOF STUDENT CODE
