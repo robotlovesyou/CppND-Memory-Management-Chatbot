@@ -7,6 +7,7 @@
 
 using std::unique_ptr;
 using std::make_unique;
+using std::move;
 // forward declarations
 class ChatBot;
 class GraphEdge;
@@ -20,7 +21,8 @@ private:
 
     // data handles (owned)
     std::vector<unique_ptr<GraphNode>> _nodes;
-    std::vector<GraphEdge *> _edges;
+    // TODO: Delete this dead code
+    //std::vector<GraphEdge *> _edges;
 
     ////
     //// EOF STUDENT CODE
