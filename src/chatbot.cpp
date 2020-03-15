@@ -53,6 +53,8 @@ ChatBot::ChatBot(ChatBot &&source) {
   source._image = NULL;
 
   _chatLogic = source._chatLogic;
+  // Keep chat logic handle pointing at correct location
+  _chatLogic->SetChatbotHandle(this);
   source._chatLogic = nullptr;
 
   _rootNode = source._rootNode;
@@ -61,6 +63,10 @@ ChatBot::ChatBot(ChatBot &&source) {
 }
 
 ChatBot &ChatBot::operator=(ChatBot &&source) {
+  if (&source == this) {
+    return *this;
+  }
+
   std::cout << "ChatBot Move Assignment Operator" << std::endl;
   _currentNode = source._currentNode;
   source._currentNode = nullptr;
@@ -69,6 +75,8 @@ ChatBot &ChatBot::operator=(ChatBot &&source) {
   source._image = NULL;
 
   _chatLogic = source._chatLogic;
+  // Keep chat logic handle pointing at correct location
+  _chatLogic->SetChatbotHandle(this);
   source._chatLogic = nullptr;
 
   _rootNode = source._rootNode;
