@@ -17,6 +17,9 @@ ChatLogic::ChatLogic()
     //// STUDENT CODE
     ////
 
+    // TODO: Delete this debugging log
+    std::cout << "initialize chatLogic" << std::endl;
+
     // create instance of chatbot
     _chatBot = new ChatBot("../images/chatbot.png");
 
@@ -31,6 +34,9 @@ ChatLogic::~ChatLogic()
 {
     //// STUDENT CODE
     ////
+
+    //TODO: Delete this debugging log
+    std::cout << "delete chatLogic" << std::endl;
 
     // delete chatbot instance
     delete _chatBot;
